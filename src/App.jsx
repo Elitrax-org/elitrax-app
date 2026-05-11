@@ -13,7 +13,7 @@ import HeatmapScreen from './screens/HeatmapScreen.jsx';
 import ProfileScreen from './screens/ProfileScreen.jsx';
 import AIChatOverlay from './screens/AIChatOverlay.jsx';
 import SessionWizard from './wizard/SessionWizard.jsx';
-import VitrinaScreen from './vitrina/VitrinaScreen.jsx';
+import MiVitrinaScreen from './vitrina/MiVitrinaScreen.jsx';
 
 export default function App({ tweaks = {} }) {
   const [authStep, setAuthStep] = useState('splash');
@@ -82,7 +82,7 @@ export default function App({ tweaks = {} }) {
             )}
             {!subView && tab === 'home'     && <HomeScreen onStartLive={startLive} onSessionDetail={openDetail} />}
             {!subView && tab === 'sessions' && <SessionsScreen onDetail={openDetail} />}
-            {!subView && tab === 'vitrina'  && <VitrinaScreen />}
+            {!subView && tab === 'vitrina'  && <MiVitrinaScreen />}
             {!subView && tab === 'profile'  && <ProfileScreen onSignOut={signOut} />}
           </div>
 
